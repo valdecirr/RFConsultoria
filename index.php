@@ -1,5 +1,5 @@
 <?php
-include_once('componentes/connect-bd.php');
+include_once('connect-bd.php');
 ?>
 
 <!DOCTYPE html>
@@ -8,7 +8,7 @@ include_once('componentes/connect-bd.php');
 <head>
     <meta charset="UTF-8">
     <link href="https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700" rel="stylesheet">
-    <link href="componentes/recursos/estilo.css" rel="stylesheet">
+    <link href="recursos/estilo.css" rel="stylesheet">
     <title>RF Consultoria</title>
 </head>
 
@@ -16,10 +16,9 @@ include_once('componentes/connect-bd.php');
     <header class="cabecalho">
         <img src="componentes/imagem/logo.png" alt="Logo">
     </header>
-
     <main class="principal">
         <div class="conteudo">
-            <a href="tabela_atividade.php">Tabela</a>
+            <a href="tabela_atividade.php">site a</a>
         </div>
     </main>
     <footer class="rodape">

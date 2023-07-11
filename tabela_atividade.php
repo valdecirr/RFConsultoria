@@ -8,14 +8,14 @@ include_once('componentes/connect-bd.php');
 <head>
     <meta charset="UTF-8">
     <link href="https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700" rel="stylesheet">
-    <link href="componentes/recursos/estilo.css" rel="stylesheet">
-    <link href="componentes/recursos/exercicio.css" rel="stylesheet">
+    <link href="recursos/estilo.css" rel="stylesheet">
+    <link href="recursos/exercicio.css" rel="stylesheet">
     <title>Teste</title>
 </head>
 
 <body class="exercicio">
     <header class="cabecalho">
-        <img src="componentes/imagem/logo.png" alt="Logo">
+        <img src="imagem/logo.png" alt="Logo">
     </header>
 
     <nav class="navegacao">
