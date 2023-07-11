@@ -1,6 +1,10 @@
 body.exercicio {
     grid-template-rows: 120px 60px 1fr 60px;
-    grid-template-areas: "cabecalho" "navegacao" "principal" "rodape";
+    grid-template-areas: 
+    "cabecalho" 
+    "navegacao" 
+    "principal" 
+    "rodape";
 }
 
 .principal {
@@ -12,9 +16,10 @@ body.exercicio {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    background-color: #555;
+    background-color: #bb2828;
 }
 
-.navegacao>a.verde {
+.navegacao > a {
     background-color: green;
+    padding: 5px 10px;
 }
