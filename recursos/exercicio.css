@@ -20,6 +20,19 @@ body.exercicio {
 }
 
 .navegacao > a {
-    background-color: green;
+    color: #fff;
+    text-decoration: none;
     padding: 5px 10px;
+    margin-right: 10px;
+    background-color: #2196f3;
+    font-size: 1.3rem;
+    font-weight: 300;
+}
+
+.navegacao > a.verde{
+    background-color: #4caf50;
+}
+
+.alinhar{
+    text-align: center;
 }
