@@ -23,6 +23,7 @@ include_once('connect-bd.php');
 
     <nav class="navegacao">
         <a href="index.php" class="verde">Voltar</a>
+        <a href="indicador.php">Dashbord</a>
     </nav>
 
     <main class="principal">

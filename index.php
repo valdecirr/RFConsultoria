@@ -21,6 +21,7 @@ include_once('connect-bd.php');
     <main class="principal">
         <div class="conteudo">
             <li><a href="tabela_atividade.php">Lista de Atividades</a></li>
+            <li><a href="indicador.php">Dashbord</a></li>
         </div>
     </main>
     <footer class="rodape">
