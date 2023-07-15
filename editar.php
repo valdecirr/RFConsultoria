@@ -36,18 +36,56 @@ $row = mysqli_fetch_assoc($result);
         <div class="conteudo">
             <h2>Verificação do Registro</h2>
             <div class="form-row">
-                <div class="form-group col-md-7">
+                <div class="form-group col-md-12">
                     <label for="Nome">Nome</label>
                     <input type="text" class="form-control" name="Nome" id="idNome" value="<? echo ($row['Nome']) ?>">
-                </div>                
+                </div>
+            </div>
+            <div class="form-row">
                 <div class="form-group col-md-2">
                     <label for="Dias">Dias</label>
                     <input type="text" class="form-control" name="Dias" id="idDias" value="<? echo ($row['Dias']) ?>">
                 </div>
-                <div class="form-group col-md-3">
+                <div class="form-group col-md-2">
                     <label for="Inicio">Início</label>
                     <input type="text" class="form-control" name="Inicio" id="idInicio" value="<? echo ($row['Inicio']) ?>">
                 </div>
+                <div class="form-group col-md-2">
+                    <label for="Inicio">CheckInicio</label>
+                    <input type="text" class="form-control" name="CheckInicio" id="idCheckInicio" value="<? echo ($row['CheckInicio']) ?>">
+                </div>
+                <div class="form-group col-md-2">
+                    <label for="Inicio">InicioReal</label>
+                    <input type="text" class="form-control" name="InicioReal" id="idInicioReal" value="<? echo ($row['InicioReal']) ?>">
+                </div>
+                <div class="form-group col-md-2">
+                    <label for="Inicio">Término</label>
+                    <input type="text" class="form-control" name="Termino" id="idTermino" disabled value="<? 
+                    $data_inicial = $row['Inicio']; // data inicial armazenada em uma variável
+                    $dias_adicionais = $row['Dias']; // quantidade de dias a ser adicionada
+                    $data_final = date('d/m/Y', strtotime('+' . $dias_adicionais . ' days', strtotime(str_replace('/', '-', $data_inicial)))) ; // data final calculada adicionando os dias adicionais à data inicial
+                    echo $data_final;
+                    ?>">
+                </div>
+                <div class="form-group col-md-2">
+                    <label for="Inicio">CheckFinal</label>
+                    <input type="text" class="form-control" name="CheckFinal" id="idCheckFinal" value="<? echo ($row['CheckFinal']) ?>">
+                </div>
+                <div class="form-group col-md-2">
+                    <label for="Inicio">FinalReal</label>
+                    <input type="text" class="form-control" name="FinalReal" id="idFinalReal" value="<? echo ($row['FinalReal']) ?>">
+                </div>
+                <div class="form-group col-md-2">
+                    <label for="Inicio">Status</label>
+                    <input type="text" class="form-control" name="Status" id="idStatus" value="<? echo ($row['Status']) ?>">
+                </div>
+                <div class="form-group col-md-12">
+                    <label for="Inicio">OBS</label>
+                    <input type="text" class="form-control" name="OBS" id="idOBS" value="<? echo ($row['OBS']) ?>">
+                </div>
+            </div>
+            <div class="form-row" style=" display: flex; justify-content: flex-end;">
+                <button class="btn btn-primary">Atualizar</button>
             </div>
         </div>
     </main>
