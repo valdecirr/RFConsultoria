@@ -22,8 +22,10 @@ include_once('connect-bd.php');
     </header>
 
     <nav class="navegacao">
-        <a href="index.php" class="verde">Voltar</a>
+        <a href="index.php" class="verde">Voltar ao Início</a>
+        <a href="empresas.php" class="verde">Voltar</a>
         <a href="indicador.php">Dashbord</a>
+        <a href="criaritem.php" class="novoitem">Novo Item</a>
     </nav>
 
     <main class="principal">
@@ -46,7 +48,9 @@ include_once('connect-bd.php');
                 </thead>
                 <tbody id="tbody">
                     <?php
-                    $sql = "SELECT * FROM rf_consultoria";
+                    // $sql = "SELECT * FROM rf_consultoria";
+                    $id = $_GET['id'];
+                    $sql = "SELECT * FROM `rf_consultoria` WHERE Empresa='$id'";
                     $result = mysqli_query($conn, $sql);
                     echo mysqli_num_rows($result) . " registros encontrados.";
                     while ($row = mysqli_fetch_assoc($result)) {

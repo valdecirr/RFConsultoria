@@ -1,37 +1,32 @@
 <?php
-//configurações de conexão ao banco de dados
 
-$servername = "localhost";
-$username = "usuario";
-$password = "senha";
-$dbname = "meubanco";
+include_once("connect-bd.php");
 
-//cria conexão ao banco de dados
-$conn = mysqli_connect($servername, $username, $password, $dbname);
+if (isset($_POST['update'])) {
 
-//verifica se ocorreu um erro na conexão
-if (!$conn) {
-    die("Conexão falhou: " . mysqli_connect_error());
-}
+    $id = $_POST['resultID'];
+    $nome = $_POST['Nome'];
+    $dias = $_POST['Dias'];
+    $inicio = $_POST['Inicio'];
+    $checkinicio = $_POST['CheckInicio'];
+    $inicioreal = $_POST['InicioReal'];
+    $termino = $_POST['Termino'];
+    $checkfinal = $_POST['CheckFinal'];
+    $finalreal = $_POST['FinalReal'];
+    $status = $_POST['Status'];
+    $obs = $_POST['OBS'];
 
-//verifica os dados enviados via POST
-if (isset($_POST["submit"])) {
-    $id = $_POST['id'];
-    $campo1 = $_POST['campo1'];
-    $campo2 = $_POST['campo2'];
-    $campo3 = $_POST['campo3'];
-    $campo4 = $_POST['campo4'];
-    $campo5 = $_POST['campo5'];
+    $sql = "UPDATE rf_consultoria  SET Nome='$nome',Dias='$dias',Inicio='$inicio',CheckInicio='$checkinicio',InicioReal='$inicioreal',Termino='$termino',CheckFinal='$checkfinal',FinalReal='$finalreal',Status='$status',OBS='$obs' WHERE ID='$id'";
 
-    //comando SQL para atualizar os dados na tabela "minhatabela"
-    $sql = "UPDATE minhatabela SET campo1='$campo1', campo2='$campo2', campo3='$campo3', campo4='$campo4', campo5='$campo5' WHERE id = '$id'";
+    // echo $sql;
+    $result = $conn->query($sql);
 
-    if (mysqli_query($conn, $sql)) {
+    if ($result) {
         echo "Dados atualizados com sucesso!";
     } else {
-        echo "Erro ao tentar atualizar os dados: " . mysqli_error($conn);
+        echo "Erro ao atualizar os dados!";
     }
-
-    //fecha conexão ao banco de dados
-    mysqli_close($conn);
 }
+    header('Location: empresas.php');
+
+?>

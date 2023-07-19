@@ -58,3 +58,8 @@ body {
     color: #444;
 
 }
+
+#tabelaempresas>th{
+    background-color: #1867c0;
+    
+}

@@ -33,6 +33,10 @@ body.exercicio {
     background-color: #4caf50;
 }
 
+.navegacao > a.novoitem{
+    background-color: #115a77;
+}
+
 .alinhar{
     text-align: center;
 }

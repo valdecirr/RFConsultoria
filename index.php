@@ -20,7 +20,7 @@ include_once('connect-bd.php');
     </header>
     <main class="principal">
         <div class="conteudo">
-            <li><a href="tabela_atividade.php">Lista de Atividades</a></li>
+            <li><a href="empresas.php">Empresas</a></li>
             <li><a href="indicador.php">Dashbord</a></li>
         </div>
     </main>
